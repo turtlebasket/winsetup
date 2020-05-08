@@ -20,6 +20,9 @@ SetWorkingDir %A_ScriptDir%
 !-::WinMinimize, A
 return
 
+#IfWinActive
+!+-::WinMinimizeAll, A
+
 ; Application launchers
 
 ^!t::Run, wt.exe ; Windows Terminal
