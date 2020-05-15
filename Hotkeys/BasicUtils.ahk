@@ -16,12 +16,23 @@ SetWorkingDir %A_ScriptDir%
 
 ; Window management
 
-#IfWinActive
+#IfWinActive ; Minimize Window
 !-::WinMinimize, A
 return
 
-#IfWinActive
+#IfWinActive ; Minimize All
 !+-::WinMinimizeAll, A
+return
+
+#IfWinActive ; Toggle Maximization State
+!=::
+WinGet, winstate, MinMax, A
+If winstate = 0
+    WinMaximize, A
+Else
+    WinRestore, A
+
+return
 
 ; Application launchers
 
