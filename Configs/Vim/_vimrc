@@ -1,0 +1,10 @@
+set shiftwidth=4
+set tabstop=4
+set linebreak
+set autoindent
+set wrap
+set conceallevel=0
+syntax on
+
+set t_Co=256
+colorscheme wombat256mod
