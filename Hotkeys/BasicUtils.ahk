@@ -18,11 +18,11 @@ SetWorkingDir %A_ScriptDir%
 
 #IfWinActive ; Minimize Window
 !-::WinMinimize, A
-return
+#If
 
 #IfWinActive ; Minimize All
 !+-::WinMinimizeAll, A
-return
+#If
 
 #IfWinActive ; Toggle Maximization State
 !=::
@@ -31,10 +31,9 @@ If winstate = 0
     WinMaximize, A
 Else
     WinRestore, A
-
 return
+#If
 
 ; Application launchers
 
 ^!t::Run, wt.exe ; Windows Terminal
-return
