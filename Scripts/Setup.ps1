@@ -1,5 +1,9 @@
-﻿# Install Chocolatey
+﻿# Install Modules
+Install-Module PSReadLine -Scope CurrentUser
+Install-Module posh-git -Scope CurrentUser
+Install-Module oh-my-posh -Scope CurrentUser
 
+# Install Chocolatey
 Write-Output "Install Chocolatey."
 Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
 
