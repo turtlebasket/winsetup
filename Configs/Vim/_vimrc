@@ -1,10 +1,48 @@
+set autochdir
 set shiftwidth=4
 set tabstop=4
 set linebreak
+set breakindent
 set autoindent
 set wrap
 set conceallevel=0
+set backspace=2
+set backspace=indent,eol,start
+set fileformat=unix
+set fileformats=unix,dos
+set nobinary
+set relativenumber
 syntax on
 
+" Aliases
+cnoreabbrev ge browse confirm e
+cnoreabbrev ! aliasrun
+
+" Plugins
+call plug#begin()
+Plug 'skywind3000/asyncrun.vim'
+call plug#end()
+
+" Theming
 set t_Co=256
+set guifont=Cascadia_Code:h10
 colorscheme wombat256mod
+
+" Hide GVim Elements
+set guioptions-=m
+set guioptions-=T
+set guioptions-=r
+set guioptions-=L
+set guioptions-=e
+
+" Navigation & Shortcuts
+nnoremap <A-1> 1gt
+nnoremap <A-2> 2gt
+nnoremap <A-3> 3gt
+nnoremap <A-4> 4gt
+nnoremap <A-5> 5gt
+nnoremap <A-6> 6gt
+nnoremap <A-7> 7gt
+nnoremap <A-8> 8gt
+nnoremap <A-9> 9gt
+nnoremap <A-0> 10gt
