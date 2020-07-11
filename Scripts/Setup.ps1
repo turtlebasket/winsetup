@@ -1,4 +1,9 @@
-﻿# Install Modules
+﻿# SETUP SCRIPT. RUN IN POWERSHELL CORE.
+
+# Disable Telemetry/Connected Experience Service
+Set-Service DiagTrack -StartupType Disabled
+
+# Install Modules
 Install-Module PSReadLine -Scope CurrentUser
 Install-Module posh-git -Scope CurrentUser
 Install-Module oh-my-posh -Scope CurrentUser
