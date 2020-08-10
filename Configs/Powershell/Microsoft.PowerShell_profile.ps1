@@ -1,15 +1,14 @@
-# Alias Management
+Import-Module posh-git
+Import-Module oh-my-posh
+Set-Theme Agnoster
+Remove-Alias ls
 Remove-Alias rm
 Set-Alias cat bat
 Set-Alias vim gvim
-Set-Alias re refreshenv
-# Set-Alias ls lsd
+Set-Alias gb 'C:\Program Files\Git\bin\bash.exe'
+Set-Alias wb bash
 
-# Var Management
-$env:BAT_PAGER = 'auto'
-
-# Theme/Readline stuff
 Set-PSReadLineOption -EditMode Emacs
-Import-Module posh-git
-Import-Module oh-my-posh
-Set-Theme Paradox
+Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
+Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
+Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
