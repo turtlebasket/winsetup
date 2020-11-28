@@ -1,3 +1,9 @@
+" Win behavior
+source $VIMRUNTIME/mswin.vim
+behave mswin
+
+" Preferences
+set encoding=utf-8
 set autochdir
 set shiftwidth=4
 set tabstop=4
@@ -20,13 +26,17 @@ cnoreabbrev ! aliasrun
 
 " Plugins
 call plug#begin()
-Plug 'skywind3000/asyncrun.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'airblade/vim-gitgutter'
 call plug#end()
 
 " Theming
 set t_Co=256
-set guifont=Cascadia_Code:h10
-colorscheme wombat256mod
+set guifont=Cascadia_Code_PL:h10
+colorscheme	Tomorrow-Night
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'powerlineish'
 
 " Hide GVim Elements
 set guioptions-=m
@@ -36,6 +46,9 @@ set guioptions-=L
 set guioptions-=e
 
 " Navigation & Shortcuts
+" inoremap <C-c> "+y
+" inoremap <C-v> <C-o>:"+p<CR>
+
 nnoremap <A-1> 1gt
 nnoremap <A-2> 2gt
 nnoremap <A-3> 3gt
