@@ -1,1 +1,0 @@
-vim sharex git gitkraken wget youtube-dl powertoys pandoc gnuwin32-coreutils.install clink
