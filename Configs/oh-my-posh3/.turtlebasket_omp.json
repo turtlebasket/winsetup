@@ -1,0 +1,123 @@
+{
+    "final_space": true,
+    "console_title": false,
+    "console_title_style": "",
+    "blocks": [
+		{
+            "type": "newline",
+            "alignment": "",
+            "horizontal_offset": 0,
+            "vertical_offset": 0,
+            "segments": null
+        },
+        {
+            "type": "prompt",
+            "alignment": "left",
+            "horizontal_offset": 0,
+            "vertical_offset": 0,
+            "segments": [
+				{
+				    "type": "os",
+				    "style": "diamond",
+				    "foreground": "black",
+				    "background": "lightWhite",
+				    "leading_diamond": "",
+				    "trailing_diamond": "",
+                    "powerline_symbol": "",
+                    "invert_powerline": false,
+				    "properties": null
+				},
+                {
+                    "type": "path",
+                    "style": "powerline",
+                    "powerline_symbol": "",
+                    "invert_powerline": false,
+                    "foreground": "lightWhite",
+                    "background": "blue",
+                    "leading_diamond": "",
+                    "trailing_diamond": "",
+                    "properties": {
+                        "prefix": "  ",
+                        "style": "folder"
+                    }
+                },
+                {
+                    "type": "git",
+                    "style": "powerline",
+                    "powerline_symbol": "",
+                    "invert_powerline": false,
+                    "foreground": "black",
+                    "background": "green",
+                    "leading_diamond": "",
+                    "trailing_diamond": "",
+                    "properties": {
+                        "display_stash_count": true,
+                        "display_upstream_icon": true,
+						"color_background": true,
+						"status_colors_enabled": true,
+						"local_changes_color": "yellow",
+						"ahead_color": "purple",
+						"behind_color": "red"
+                    }
+                },
+                {
+                    "type": "root",
+                    "style": "powerline",
+                    "powerline_symbol": "",
+                    "invert_powerline": false,
+                    "foreground": "lightWhite",
+                    "background": "cyan",
+                    "leading_diamond": "",
+                    "trailing_diamond": "",
+                    "properties": null
+                },
+                {
+                    "type": "exit",
+                    "style": "diamond",
+                    "powerline_symbol": "",
+                    "invert_powerline": false,
+                    "foreground": "lightWhite",
+                    "background": "darkGray",
+                    "leading_diamond": "",
+                    "trailing_diamond": "",
+                    "properties": {
+                        "always_enabled": true,
+                        "color_background": true,
+                        "display_exit_code": false,
+                        "error_color": "red",
+                        "prefix": "\u003ctransparent\u003e\u003c/\u003e "
+                    }
+                }
+            ]
+        },
+		{
+            "type": "newline",
+            "alignment": "",
+            "horizontal_offset": 0,
+            "vertical_offset": 0,
+            "segments": null
+        },
+        {
+            "type": "prompt",
+            "alignment": "left",
+            "horizontal_offset": 0,
+            "vertical_offset": 0,
+            "segments": [
+                {
+                    "type": "text",
+                    "style": "plain",
+                    "powerline_symbol": "",
+                    "invert_powerline": false,
+                    "foreground": "blue",
+                    "background": "",
+                    "leading_diamond": "",
+                    "trailing_diamond": "",
+                    "properties": {
+                        "prefix": "",
+                        "text": "❯"
+                    }
+                }
+            ]
+        }
+    ]
+}

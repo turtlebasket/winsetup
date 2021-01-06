@@ -37,3 +37,4 @@ return
 ; Application launchers
 
 ^!t::Run, wt.exe ; Windows Terminal
+^!v::Run, gvim.exe ; gVim
