@@ -1,6 +1,9 @@
 " Win behavior
-source $VIMRUNTIME/mswin.vim
-behave mswin
+" source $VIMRUNTIME/mswin.vim
+" behave mswin
+
+" Window height
+set lines=32 columns=110
 
 " Preferences
 set encoding=utf-8
@@ -29,6 +32,7 @@ call plug#begin()
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
+Plug 'preservim/nerdtree'
 call plug#end()
 
 " Theming
@@ -48,6 +52,8 @@ set guioptions-=e
 " Navigation & Shortcuts
 " inoremap <C-c> "+y
 " inoremap <C-v> <C-o>:"+p<CR>
+
+nnoremap <C-n> :NERDTreeToggle<CR>
 
 nnoremap <A-1> 1gt
 nnoremap <A-2> 2gt

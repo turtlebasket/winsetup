@@ -20,9 +20,9 @@ SetWorkingDir %A_ScriptDir%
 !-::WinMinimize, A
 #If
 
-#IfWinActive ; Minimize All
-!+-::WinMinimizeAll, A
-#If
+; #IfWinActive ; Minimize All
+; !+-::WinMinimizeAll, A
+; #If
 
 #IfWinActive ; Toggle Maximization State
 !=::
@@ -34,7 +34,25 @@ Else
 return
 #If
 
+!^+c::
+Clipboard := ""
+MsgBox, Cleared clipboard.
+return
+
+#IfWinActive ; Close current window
+!q::WinClose, A
+
+
+; Restart explorer.exe
+!F2::Run, %comspec% /c taskkill /f /IM explorer.exe & explorer.exe
+
+
 ; Application launchers
 
 ^!t::Run, wt.exe ; Windows Terminal
-^!v::Run, gvim.exe ; gVim
+^!v::Run, gvim.bat ; gVim
+
+^!p:: ; Powershell as Administrator
+Run *RunAs powershell
+RunAs
+return
