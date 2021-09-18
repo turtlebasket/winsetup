@@ -22,6 +22,7 @@ set fileformats=unix,dos
 set nobinary
 set relativenumber
 syntax on
+set shell=pwsh.exe
 
 " Aliases
 cnoreabbrev ge browse confirm e
@@ -34,14 +35,22 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'airblade/vim-gitgutter'
 Plug 'preservim/nerdtree'
 Plug 'flazz/vim-colorschemes'
+Plug 'tomlion/vim-solidity'
+Plug 'zah/nim.vim'
+Plug 'ycm-core/YouCompleteMe'
+Plug 'NLKNguyen/papercolor-theme'
+" Plug 'vim-syntastic/syntastic'
 call plug#end()
 
 " Theming
 set t_Co=256
-set guifont=Cascadia_Code_PL:h10
-colorscheme	Tomorrow-Night
+set guifont=Cascadia_Code_PL:h9
+set background=dark
+colorscheme	PaperColor
 let g:airline_powerline_fonts = 1
 let g:airline_theme = 'powerlineish'
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 " Hide GVim Elements
 set guioptions-=m
@@ -53,7 +62,6 @@ set guioptions-=e
 " Navigation & Shortcuts
 " inoremap <C-c> "+y
 " inoremap <C-v> <C-o>:"+p<CR>
-
 nnoremap <C-n> :NERDTreeToggle<CR>
 
 nnoremap <A-1> 1gt
